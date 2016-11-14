@@ -5,7 +5,7 @@ use Zend\Stdlib\ArrayUtils;
 
 /**
  * This makes our life easier when dealing with paths. Everything is relative
- * to the application root now.
+ * to the portal root now.
  */
 chdir(dirname(__DIR__));
 
@@ -36,5 +36,5 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
     $appConfig = ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
 }
 
-// Run the application!
+// Run the portal!
 Application::init($appConfig)->run();

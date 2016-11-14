@@ -1,6 +1,12 @@
+SetEnv APP_REVISION 999
+SetEnv USE_CACHE 0
+SetEnv APPLICATION_ENV development
+SetEnv APP_NAME zfPortal
+
 RewriteEngine On
 # The following rule tells Apache that if the requested filename
 # exists, simply serve it.
+RewriteBase /zfPortal
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
